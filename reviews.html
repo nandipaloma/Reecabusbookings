@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews - Reeca Travel</title>
+    <title>Book a Trip - Reeca Travel</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png">
 </head>
 <body>
     <header>
-        <h1>Customer Reviews</h1>
+        <div class="logo">
+            <img src="logo.png" alt="Reeca Travel Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,16 +22,49 @@
         </nav>
     </header>
     
+    <section class="booking-form">
+        <h2>Reserve Your Seat</h2>
+        <form action="#" method="post">
+            <label for="date">Departure Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="seat">Choose Your Seat:</label>
+            <select id="seat" name="seat" required>
+                <option value="">Select a Seat</option>
+                <option value="1A">1A</option>
+                <option value="1B">1B</option>
+                <option value="2A">2A</option>
+                <option value="2B">2B</option>
+            </select>
+            
+            <label for="payment">Payment Method:</label>
+            <div class="payment-options">
+                <input type="radio" id="online" name="payment" value="online" required>
+                <label for="online">Online Payment</label>
+                <input type="radio" id="cash" name="payment" value="cash" required>
+                <label for="cash">Cash</label>
+            </div>
+            
+            <button type="submit" class="btn">Confirm Booking</button>
+        </form>
+    </section>
+    
     <section class="reviews">
         <h2>Rate Your Trip</h2>
         <form action="#" method="post">
-            <label for="rating">Star Rating:</label>
-            <input type="number" id="rating" name="rating" min="1" max="5" required>
+            <label for="rating">Your Rating:</label>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+            </div>
             
-            <label for="complaints">Any Complaints?</label>
-            <textarea id="complaints" name="complaints" rows="4"></textarea>
+            <label for="complaint">Any Complaints or Feedback?</label>
+            <textarea id="complaint" name="complaint" rows="4" placeholder="Let us know about your experience..."></textarea>
             
-            <button type="submit">Submit Review</button>
+            <button type="submit" class="btn">Submit Review</button>
         </form>
     </section>
     
@@ -37,3 +73,5 @@
     </footer>
 </body>
 </html>
+    
+    
